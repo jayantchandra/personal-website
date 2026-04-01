@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/chat",
+      "destination": "https://relaychat-frontend.vercel.app/login"
+    }
+  ]
+}
