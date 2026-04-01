@@ -1,11 +1,27 @@
-import { Mail, Code, Briefcase, Share2, MapPin } from "lucide-react";
+import { Mail, Code, Briefcase, Share2, MapPin, Book } from "lucide-react";
 
 export default function AboutPage() {
   const socials = [
-    { name: "GitHub", href: "https://github.com", icon: Code, username: "@jayantchandra" },
-    { name: "Twitter", href: "https://twitter.com", icon: Share2, username: "@jayantc" },
-    { name: "LinkedIn", href: "https://linkedin.com", icon: Briefcase, username: "Jayant Chandra" },
-    { name: "Email", href: "mailto:hello@example.com", icon: Mail, username: "hello@jayant.me" },
+    {
+      name: "GitHub",
+      href: "https://github.com/jayantchandra",
+      icon: Code,
+      username: "github.com/jayantchandra",
+    },
+    {
+      name: "Substack",
+      href: "https://jayantchandra.substack.com/",
+      icon: Book,
+      username: "jayantchandra.substack.com",
+    },
+    // { name: "Twitter", href: "https://twitter.com", icon: Share2, username: "@jayantc" },
+    // { name: "LinkedIn", href: "https://linkedin.com", icon: Briefcase, username: "Jayant Chandra" },
+    {
+      name: "Email",
+      href: "mailto:hello@jayantchandra.com",
+      icon: Mail,
+      username: "hello@jayantchandra.com",
+    },
   ];
 
   return (
@@ -18,19 +34,87 @@ export default function AboutPage() {
             </h1>
             <div className="flex items-center gap-2 text-zinc-500 font-medium">
               <MapPin className="w-4 h-4" />
-              <span>Bengaluru, India</span>
+              <span>New Delhi, India</span>
             </div>
           </header>
 
           <div className="space-y-6 text-xl text-zinc-600 dark:text-zinc-400 leading-relaxed font-medium">
             <p>
-              I build high-performance systems and developer tools that empower engineering teams.
+              Full-stack developer building{" "}
+              <span className="text-zinc-900 dark:text-zinc-100 font-semibold">
+                production-grade systems
+              </span>
+              ,
+              <span className="text-zinc-900 dark:text-zinc-100 font-semibold">
+                {" "}
+                internal tools
+              </span>
+              , and
+              <span className="text-zinc-900 dark:text-zinc-100 font-semibold">
+                {" "}
+                data-driven web applications
+              </span>
+              .
             </p>
+
             <p className="text-base font-normal">
-              My journey began with a curiosity about how things work under the hood, which led me to specialize in systems architecture and backend engineering. I believe in writing code that is not just functional, but maintainable and robust.
+              Experience across{" "}
+              <span className="font-medium text-zinc-900 dark:text-zinc-100">
+                early-stage startups
+              </span>{" "}
+              and
+              <span className="font-medium text-zinc-900 dark:text-zinc-100">
+                {" "}
+                enterprise environments
+              </span>
+              , leading
+              <span className="font-medium text-zinc-900 dark:text-zinc-100">
+                {" "}
+                system design
+              </span>
+              ,
+              <span className="font-medium text-zinc-900 dark:text-zinc-100">
+                {" "}
+                feature scoping
+              </span>
+              , and
+              <span className="font-medium text-zinc-900 dark:text-zinc-100">
+                {" "}
+                end-to-end delivery
+              </span>
+              .
             </p>
+
             <p className="text-base font-normal">
-              Beyond my professional work, I&apos;m an advocate for open-source software and enjoy contributing to projects that improve the developer experience.
+              Built{" "}
+              <span className="font-medium text-zinc-900 dark:text-zinc-100">
+                microservice-based platforms
+              </span>
+              ,
+              <span className="font-medium text-zinc-900 dark:text-zinc-100">
+                {" "}
+                analytics dashboards
+              </span>
+              , and
+              <span className="font-medium text-zinc-900 dark:text-zinc-100">
+                {" "}
+                internal systems
+              </span>{" "}
+              used daily by teams, with focus on{" "}
+              <span className="font-medium text-zinc-900 dark:text-zinc-100">
+                performance
+              </span>
+              ,
+              <span className="font-medium text-zinc-900 dark:text-zinc-100">
+                {" "}
+                reliability
+              </span>
+              , and
+              <span className="font-medium text-zinc-900 dark:text-zinc-100">
+                {" "}
+                fast iteration
+              </span>
+              .
             </p>
           </div>
         </div>
@@ -56,7 +140,9 @@ export default function AboutPage() {
                   <div className="flex items-center gap-4">
                     <social.icon className="w-5 h-5 text-zinc-400 group-hover:text-zinc-900 dark:group-hover:text-zinc-100 transition-colors" />
                     <div>
-                      <p className="text-sm font-bold text-zinc-900 dark:text-zinc-100">{social.name}</p>
+                      <p className="text-sm font-bold text-zinc-900 dark:text-zinc-100">
+                        {social.name}
+                      </p>
                       <p className="text-xs text-zinc-500">{social.username}</p>
                     </div>
                   </div>
@@ -71,15 +157,27 @@ export default function AboutPage() {
       <section className="border-t border-zinc-100 dark:border-zinc-900 pt-24 grid grid-cols-1 md:grid-cols-3 gap-12">
         <div className="space-y-4">
           <h3 className="text-xl font-bold">Experience</h3>
-          <p className="text-sm text-zinc-500 leading-relaxed">Over a decade of experience across fintech, logistics, and developer tooling startups.</p>
+          <p className="text-sm text-zinc-500 leading-relaxed">
+            ~4.5 years building and maintaining production systems across
+            healthcare platforms and enterprise analytics at Infosys.
+          </p>
         </div>
+
         <div className="space-y-4">
           <h3 className="text-xl font-bold">Focus</h3>
-          <p className="text-sm text-zinc-500 leading-relaxed">Microservices, Cloud Native, Observability, and Performance Optimization.</p>
+          <p className="text-sm text-zinc-500 leading-relaxed">
+            Full-stack development with React, Next.js, Node.js, and PostgreSQL,
+            focused on scalable systems, microservices, and performance.
+          </p>
         </div>
+
         <div className="space-y-4">
-          <h3 className="text-xl font-bold">Speaking</h3>
-          <p className="text-sm text-zinc-500 leading-relaxed">Regularly speaking at conferences about Rust, Go, and Scalable Architecture.</p>
+          <h3 className="text-xl font-bold">Impact</h3>
+          <p className="text-sm text-zinc-500 leading-relaxed">
+            Delivered internal tools, dashboards, and platforms used daily by
+            teams, improving workflow efficiency, system visibility, and
+            operational speed.
+          </p>
         </div>
       </section>
     </div>
