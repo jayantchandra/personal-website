@@ -1,4 +1,4 @@
-import { Mail, Code, Briefcase, Share2, MapPin, Book } from "lucide-react";
+import { Mail, Code, Share2, MapPin, Book } from "lucide-react";
 
 export default function AboutPage() {
   const socials = [

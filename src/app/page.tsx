@@ -38,7 +38,7 @@ export default function Home() {
         </h1>
 
         <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl font-medium">
-          I'm Jayant Chandra — a full-stack developer focused on building
+          I&apos;m Jayant Chandra — a full-stack developer focused on building
           resilient distributed systems and developer-first tools.
         </p>
       </section>
@@ -153,7 +153,7 @@ export default function Home() {
 
 /* COMPONENTS */
 
-function Badge({ text }) {
+function Badge({ text }: { text: string }) {
   return (
     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 dark:bg-zinc-900 border text-xs text-zinc-600">
       <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -162,7 +162,7 @@ function Badge({ text }) {
   );
 }
 
-function InfoBlock({ title, text }) {
+function InfoBlock({ title, text }: { title: string; text: string }) {
   return (
     <div className="space-y-3">
       <h3 className="text-lg font-bold">{title}</h3>
