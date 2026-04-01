@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/Navigation";
 import { Providers } from "@/components/Providers";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,11 +26,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-    >
-      <body className={`${geistSans.variable} ${geistMono.variable} min-h-screen flex flex-col bg-background text-foreground selection:bg-zinc-200 dark:selection:bg-zinc-800 antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen flex flex-col bg-background text-foreground selection:bg-zinc-200 dark:selection:bg-zinc-800 antialiased`}
+      >
         <Providers>
           <Navigation />
           <main className="flex-1 max-w-4xl mx-auto px-4 py-16 w-full">
@@ -37,10 +37,12 @@ export default function RootLayout({
           </main>
           <footer className="border-t border-zinc-100 dark:border-zinc-900 py-12">
             <div className="max-w-4xl mx-auto px-4 text-sm text-zinc-500 text-center">
-              &copy; {new Date().getFullYear()} Jayant Chandra. All rights reserved.
+              &copy; {new Date().getFullYear()} Jayant Chandra. All rights
+              reserved.
             </div>
           </footer>
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
